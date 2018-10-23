@@ -1,8 +1,6 @@
 global.chai = require('chai');
 global.sinon = require('sinon');
 
-// window.Handlebars = require('handlebars');
-
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 
