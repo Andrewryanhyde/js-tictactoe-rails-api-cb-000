@@ -75,7 +75,7 @@ function loadGame(element){
     });
     let count = 0;
     for (let element of $('td') ){
-      element.innerText != "" ? count++ : count += 0;  
+      element.innerText != "" ? count++ : count += 0;
     }
     turn = count;
   })
@@ -89,7 +89,7 @@ function saveGame() {
       url: `/games/${currentGame}`,
       type: "PATCH",
       data: {'state': board}
-    })  
+    })
   } else if (!empty){
     $.post('/games', {'state': board}, (response) => {
       currentGame = response.data.id;
@@ -102,7 +102,7 @@ function clearGame() {
   currentGame = null;
   $('td').text((value) => {
     return ''
-  });  
+  });
 }
 
 function previousGames() {
@@ -119,7 +119,7 @@ function previousGames() {
 function openSpaces(){
   let board = getBoard();
   // let result = board.every((space) => space != '' )
-  return !board.every((space) => space != '')  
+  return !board.every((space) => space != '')
 }
 
 
